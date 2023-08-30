@@ -1,31 +1,21 @@
-# Mario Game using Pygame
+MIT License
 
-A simple Mario game created using the Pygame library. In this game, you control Mario to avoid obstacles and earn points. The game features a dragon, flames, and dynamic level changes.
+Copyright (c) 2023 Truong Le Vinh Phuc
 
-## Screenshots
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-![Gameplay Screenshot](screenshots/gameplay.png)
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-## Features
-
-- Control Mario using arrow keys.
-- Dodge obstacles and collect points.
-- Dynamic level changes based on score.
-
-## Resources
-
-- Images: Place image files in the project directory.
-- Sounds: Place sound files in the project directory.
-
-## Contributing
-
-Contributions are welcome! If you find a bug or have an idea for an enhancement, feel free to open an issue or submit a pull request.
-
-## Credits
-
-- [Pygame Library](https://www.pygame.org/)
-- Images and sounds sourced from various online resources (see individual files for credits).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
