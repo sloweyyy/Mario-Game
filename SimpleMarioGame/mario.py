@@ -1,5 +1,6 @@
 import pygame
 import sys
+
 pygame.init()
 
 WINDOW_WIDTH = 1200
@@ -24,10 +25,12 @@ pygame.display.set_caption('Mario')
 class Topscore:
     def __init__(self):
         self.high_score = 0
+
     def top_score(self, score):
         if score > self.high_score:
             self.high_score = score
         return self.high_score
+
 
 topscore = Topscore()
 
@@ -40,7 +43,7 @@ class Dragon:
         self.dragon_img_rect = self.dragon_img.get_rect()
         self.dragon_img_rect.width -= 10
         self.dragon_img_rect.height -= 10
-        self.dragon_img_rect.top = WINDOW_HEIGHT/2
+        self.dragon_img_rect.top = WINDOW_HEIGHT / 2
         self.dragon_img_rect.right = WINDOW_WIDTH
         self.up = True
         self.down = False
@@ -70,7 +73,6 @@ class Flames:
         self.flames_img_rect.right = dragon.dragon_img_rect.left
         self.flames_img_rect.top = dragon.dragon_img_rect.top + 30
 
-
     def update(self):
         canvas.blit(self.flames_img, self.flames_img_rect)
 
@@ -85,7 +87,7 @@ class Mario:
         self.mario_img = pygame.image.load('maryo.png')
         self.mario_img_rect = self.mario_img.get_rect()
         self.mario_img_rect.left = 20
-        self.mario_img_rect.top = WINDOW_HEIGHT/2 - 100
+        self.mario_img_rect.top = WINDOW_HEIGHT / 2 - 100
         self.down = True
         self.up = False
 
@@ -112,7 +114,7 @@ def game_over():
     topscore.top_score(SCORE)
     game_over_img = pygame.image.load('end.png')
     game_over_img_rect = game_over_img.get_rect()
-    game_over_img_rect.center = (WINDOW_WIDTH/2, WINDOW_HEIGHT/2)
+    game_over_img_rect.center = (WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2)
     canvas.blit(game_over_img, game_over_img_rect)
     while True:
         for event in pygame.event.get():
@@ -132,7 +134,7 @@ def start_game():
     canvas.fill(BLACK)
     start_img = pygame.image.load('start.png')
     start_img_rect = start_img.get_rect()
-    start_img_rect.center = (WINDOW_WIDTH/2, WINDOW_HEIGHT/2)
+    start_img_rect.center = (WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2)
     canvas.blit(start_img, start_img_rect)
     while True:
         for event in pygame.event.get():
@@ -167,9 +169,6 @@ def check_level(SCORE):
         LEVEL = 4
 
 
-
-
-
 def game_loop():
     while True:
         global dragon
@@ -179,7 +178,7 @@ def game_loop():
         add_new_flame_counter = 0
         global SCORE
         SCORE = 0
-        global  HIGH_SCORE
+        global HIGH_SCORE
         flames_list = []
         pygame.mixer.music.load('mario_theme.wav')
         pygame.mixer.music.play(-1, 0.0)
@@ -218,19 +217,19 @@ def game_loop():
                         mario.down = True
                         mario.up = False
 
-            score_font = font.render('Score:'+str(SCORE), True, GREEN)
+            score_font = font.render('Score:' + str(SCORE), True, GREEN)
             score_font_rect = score_font.get_rect()
-            score_font_rect.center = (200, cactus_img_rect.bottom + score_font_rect.height/2)
+            score_font_rect.center = (200, cactus_img_rect.bottom + score_font_rect.height / 2)
             canvas.blit(score_font, score_font_rect)
 
-            level_font = font.render('Level:'+str(LEVEL), True, GREEN)
+            level_font = font.render('Level:' + str(LEVEL), True, GREEN)
             level_font_rect = level_font.get_rect()
-            level_font_rect.center = (500, cactus_img_rect.bottom + score_font_rect.height/2)
+            level_font_rect.center = (500, cactus_img_rect.bottom + score_font_rect.height / 2)
             canvas.blit(level_font, level_font_rect)
 
-            top_score_font = font.render('Top Score:'+str(topscore.high_score),True,GREEN)
+            top_score_font = font.render('Top Score:' + str(topscore.high_score), True, GREEN)
             top_score_font_rect = top_score_font.get_rect()
-            top_score_font_rect.center = (800, cactus_img_rect.bottom + score_font_rect.height/2)
+            top_score_font_rect.center = (800, cactus_img_rect.bottom + score_font_rect.height / 2)
             canvas.blit(top_score_font, top_score_font_rect)
 
             canvas.blit(cactus_img, cactus_img_rect)
@@ -246,5 +245,3 @@ def game_loop():
 
 
 start_game()
-
-
