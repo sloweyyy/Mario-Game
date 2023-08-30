@@ -1,6 +1,6 @@
 import pygame
 import sys
-
+print (pygame.ver)
 pygame.init()
 
 WINDOW_WIDTH = 1200
